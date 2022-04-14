@@ -103,6 +103,16 @@ namespace TexturedCube
             _ticks += deltaSeconds * 1000f;
             _cl.Begin();
 
+            /*
+            float aspect = (float)Window.Width / Window.Height;
+            float orthoSize = 2.0f;
+
+            _cl.UpdateBuffer(_projectionBuffer, 0, Matrix4x4.CreateOrthographic(
+                width: aspect *orthoSize,
+                height: orthoSize,
+                0.5f,
+                100f));*/
+
             _cl.UpdateBuffer(_projectionBuffer, 0, Matrix4x4.CreatePerspectiveFieldOfView(
                 1.0f,
                 (float)Window.Width / Window.Height,
